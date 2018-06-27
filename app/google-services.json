@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "408125356714",
+    "firebase_url": "https://myownwhatsapp.firebaseio.com",
+    "project_id": "myownwhatsapp",
+    "storage_bucket": "myownwhatsapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408125356714:android:bfc14132e7613724",
+        "android_client_info": {
+          "package_name": "com.santosh.myownwhatsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408125356714-5jjrnvusi9i6vtqik3puqejrtet5bl9g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwa9nRNlH6oHyBDjkgCPCya0O9fyx8YIU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
