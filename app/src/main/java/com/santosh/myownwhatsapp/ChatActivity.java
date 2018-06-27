@@ -1,5 +1,6 @@
 package com.santosh.myownwhatsapp;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -22,9 +23,14 @@ import java.util.Date;
 public class ChatActivity extends AppCompatActivity {
 
     private  DatabaseReference msgDatabaseRef;
+    private String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = getIntent();
+        userName = intent.getStringExtra("USER_NAME");
+
         setContentView(R.layout.chat_new_window);
 
         final TextView msgTextView = findViewById(R.id.msgEditText);
@@ -44,7 +50,7 @@ public class ChatActivity extends AppCompatActivity {
                 msgTextView.setText(""); //clear the message.
 
                 //create and initialize model class
-                ChatMsg chatMsg = new ChatMsg(msg,"santosh",new Date());
+                ChatMsg chatMsg = new ChatMsg(msg,userName,new Date());
                 Log.d("CHAT","sending message to firebase :: "+chatMsg);
 
                 String msgId = msgDatabaseRef.push().getKey();
